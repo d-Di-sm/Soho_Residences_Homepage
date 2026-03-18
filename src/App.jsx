@@ -251,7 +251,7 @@ function App() {
       folder: "2_BR",
       image: "./FP_FAC/B_2BR_01_FP.png",
       imageMap: "./FP/map/2BR_A_G.png",
-      title: "2 Bedroom Garden A",
+      title: "GARDEN APARTMENT",
       flips: [
         "LO_01.png",
         "LO_02.png",
@@ -345,7 +345,7 @@ function App() {
       folder: "2_BR",
       image: "./FP_FAC/A_2BR_01_FP.png",
       imageMap: "./FP/map/2BR_B_G.png",
-      title: "2 Bedroom Garden B",
+      title: "GARDEN APARTMENT",
       flips: [
         "LO_01.png",
         "LO_02.png",
@@ -439,7 +439,7 @@ function App() {
       folder: "2_BR",
       image: "./FP_FAC/B_2BR_02_FP.png",
       imageMap: "./FP/map/2BR_A_.png",
-      title: "2 Bedroom Level 1 A",
+      title: "TERRACE APARTMENT",
       flips: [
         "LO_01.png",
         "LO_02.png",
@@ -533,7 +533,7 @@ function App() {
       folder: "2_BR",
       image: "./FP_FAC/A_2BR_02_FP.png",
       imageMap: "./FP/map/2BR_B_.png",
-      title: "2 Bedroom Level 1 B",
+      title: "TERRACE APARTMENT",
       flips: [
         "LO_01.png",
         "LO_02.png",
@@ -627,7 +627,7 @@ function App() {
       folder: "2_BR",
       image: "./FP_FAC/B_2BR_03_FP.png",
       imageMap: "./FP/map/2BR_A_.png",
-      title: "2 Bedroom Level 2 A",
+      title: "TERRACE APARTMENT",
       flips: [
         "LO_01.png",
         "LO_02.png",
@@ -721,7 +721,7 @@ function App() {
       folder: "2_BR",
       image: "./FP_FAC/A_2BR_03_FP.png",
       imageMap: "./FP/map/2BR_B_.png",
-      title: "2 Bedroom Level 2 B",
+      title: "TERRACE APARTMENT",
       flips: [
         "LO_01.png",
         "LO_02.png",
@@ -815,7 +815,7 @@ function App() {
       folder: "3_BR",
       image: "./FP_FAC/B_3BR_01_FP.png",
       imageMap: "./FP/map/3BR_A_G.png",
-      title: "3 Bedroom Garden A",
+      title: "GARDEN APARTMENT",
       // flips: ['LO.png'(0), 'LI_01.png'(1), 'LI_02.png'(2), 'KI.png'(3), 'PA_01.png'(4), 'PA_02.png'(5), 'BR_M.png'(6),  'BA_M.png'(7),  'BR_01.png'(8),  'BA_01.png'(9),  'BR_02.png'(10),  'BA_02.png'(11), 'T_01.png'(12)],
       flips: [
         "LO.png",
@@ -959,7 +959,7 @@ function App() {
       folder: "3_BR",
       image: "./FP_FAC/A_3BR_01_FP.png",
       imageMap: "./FP/map/3BR_B_G.png",
-      title: "3 Bedroom Garden B",
+      title: "GARDEN APARTMENT",
       flips: [
         "LO.png",
         "LI_01.png",
@@ -1102,7 +1102,7 @@ function App() {
       folder: "3_BR",
       image: "./FP_FAC/B_3BR_02_FP.png",
       imageMap: "./FP/map/3BR_A_.png",
-      title: "3 Bedroom Level 1 A",
+      title: "TERRACE APARTMENT",
       flips: [
         "LO.png",
         "LI_01.png",
@@ -1245,7 +1245,7 @@ function App() {
       folder: "3_BR",
       image: "./FP_FAC/A_3BR_02_FP.png",
       imageMap: "./FP/map/3BR_B_.png",
-      title: "3 Bedroom Level 1 B",
+      title: "TERRACE APARTMENT",
       flips: [
         "LO.png",
         "LI_01.png",
@@ -1388,7 +1388,7 @@ function App() {
       folder: "3_BR",
       image: "./FP_FAC/B_3BR_03_FP.png",
       imageMap: "./FP/map/3BR_A_.png",
-      title: "3 Bedroom Level 2 A",
+      title: "TERRACE APARTMENT",
       flips: [
         "LO.png",
         "LI_01.png",
@@ -1531,7 +1531,7 @@ function App() {
       folder: "3_BR",
       image: "./FP_FAC/A_3BR_03_FP.png",
       imageMap: "./FP/map/3BR_B_.png",
-      title: "3 Bedroom Level 2 B",
+      title: "TERRACE APARTMENT",
       flips: [
         "LO.png",
         "LI_01.png",
@@ -1674,7 +1674,7 @@ function App() {
       folder: "4_BR",
       image: "./FP_FAC/B_4BR_04_FP01.png",
       imageMap: "./FP/map/4BR_A_.png",
-      title: "4 Bedroom Apartment A",
+      title: "PENTHOUSE APARTMENT",
       flips: [
         "LO.png",
         "LI.png",
@@ -1844,7 +1844,7 @@ function App() {
       folder: "4_BR",
       image: "./FP_FAC/A_4BR_04_FP01.png",
       imageMap: "./FP/map/4BR_B_.png",
-      title: "4 Bedroom Apartment B",
+      title: "PENTHOUSE APARTMENT",
       flips: [
         "LO.png",
         "LI.png",
@@ -2015,7 +2015,7 @@ function App() {
       folder: "C_01",
       image: "./FP_FAC/CA_01_FP.png",
       imageMap: "./FP/map/C_A2_.png",
-      title: "The Casita A2",
+      title: "THE CASITA",
       flips: [
         "T_02.png",
         "T_01.png",
