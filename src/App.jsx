@@ -2278,11 +2278,11 @@ function App() {
                 type: "VSMShadowMap",
               }}
 
-              // camera={{ position: [5, 5, 10], fov: 30, near: 1 }}
-              // gl={{
-              //   preserveDrawingBuffer: true,
-              // }}
-              // shadows
+            // camera={{ position: [5, 5, 10], fov: 30, near: 1 }}
+            // gl={{
+            //   preserveDrawingBuffer: true,
+            // }}
+            // shadows
             >
               {/* <color attach="background" args={[backgroundColor]} /> */}
               {/* <fog attach="fog" args={[backgroundColor, 5, 12]} /> */}

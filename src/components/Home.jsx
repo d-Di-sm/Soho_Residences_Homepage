@@ -1,13 +1,46 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useAtom } from "jotai";
 import { transitionHome } from "../App";
+
+const ACCESS_PASSWORD = "SohoResCabos2026";
 
 const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [, setTransitionHomepage] = useAtom(transitionHome);
+  const [showPasswordModal, setShowPasswordModal] = useState(false);
+  const [passwordInput, setPasswordInput] = useState("");
+  const [passwordError, setPasswordError] = useState(false);
+  const inputRef = useRef(null);
 
-  const transitionToHomepage = () => {
-    setTransitionHomepage(true);
+  useEffect(() => {
+    if (showPasswordModal) {
+      setTimeout(() => inputRef.current?.focus(), 50);
+    }
+  }, [showPasswordModal]);
+
+  const handleInteractiveClick = () => {
+    setShowPasswordModal(true);
+    setPasswordInput("");
+    setPasswordError(false);
+  };
+
+  const handlePasswordSubmit = () => {
+    if (passwordInput === ACCESS_PASSWORD) {
+      setShowPasswordModal(false);
+      setTransitionHomepage(true);
+    } else {
+      setPasswordError(true);
+      setPasswordInput("");
+      inputRef.current?.focus();
+    }
+  };
+
+  const handlePasswordKeyDown = (e) => {
+    if (e.key === "Enter") handlePasswordSubmit();
+    if (e.key === "Escape") {
+      setShowPasswordModal(false);
+      setPasswordError(false);
+    }
   };
 
   return (
@@ -89,7 +122,7 @@ const Home = () => {
         <div className="interactive">
           <button
             className="interactive__button"
-            onClick={transitionToHomepage}
+            onClick={handleInteractiveClick}
           >
             INTERACTIVE EXPERIENCE
           </button>
@@ -141,7 +174,7 @@ const Home = () => {
                 textDecoration: "none",
                 textAlign: "center",
               }}
-              //   onClick={() => console.log(`${label} clicked`)}
+            //   onClick={() => console.log(`${label} clicked`)}
             >
               {label}
               {/* </button> */}
@@ -257,6 +290,108 @@ const Home = () => {
           </nav>
         )}
       </div>
+
+      {/* Modal de contraseña */}
+      {showPasswordModal && (
+        <div
+          style={{
+            position: "fixed",
+            inset: 0,
+            zIndex: 100,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "rgba(0,0,0,0.6)",
+            backdropFilter: "blur(6px)",
+          }}
+          onClick={() => { setShowPasswordModal(false); setPasswordError(false); }}
+        >
+          <div
+            style={{
+              background: "transparent",
+              backdropFilter: "blur(6px)",
+              border: "1px solid rgba(255,255,255,0.18)",
+              borderRadius: 12,
+              padding: "40px 36px",
+              minWidth: 320,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: 20,
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src="/Soho_Logo_Text_Res.png"
+              alt="Soho Logo"
+              style={{ maxHeight: 22, marginBottom: 4 }}
+            />
+            <p
+              style={{
+                color: "#fffef7",
+                letterSpacing: "0.15em",
+                fontSize: "0.75rem",
+                textTransform: "uppercase",
+                margin: 0,
+                textAlign: "center",
+              }}
+            >
+              Enter access code
+            </p>
+            <input
+              ref={inputRef}
+              type="password"
+              value={passwordInput}
+              onChange={(e) => { setPasswordInput(e.target.value); setPasswordError(false); }}
+              onKeyDown={handlePasswordKeyDown}
+              placeholder="••••••••"
+              style={{
+                background: "rgba(255,255,255,0.07)",
+                border: passwordError ? "1px solid #e05c5c" : "1px solid rgba(255,255,255,0.25)",
+                borderRadius: 6,
+                color: "#ffffff",
+                fontSize: "1rem",
+                letterSpacing: "0.2em",
+                padding: "10px 16px",
+                width: "100%",
+                outline: "none",
+                textAlign: "center",
+                boxSizing: "border-box",
+              }}
+            />
+            {passwordError && (
+              <p
+                style={{
+                  color: "#e05c5c",
+                  fontSize: "0.72rem",
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  margin: "-10px 0 0",
+                }}
+              >
+                Incorrect code
+              </p>
+            )}
+            <button
+              onClick={handlePasswordSubmit}
+              style={{
+                background: "none",
+                border: "1px solid rgba(255,255,255,0.5)",
+                borderRadius: 6,
+                color: "#fffef7",
+                fontSize: "0.78rem",
+                letterSpacing: "0.15em",
+                textTransform: "uppercase",
+                padding: "10px 32px",
+                cursor: "pointer",
+                width: "100%",
+              }}
+            >
+              Enter
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

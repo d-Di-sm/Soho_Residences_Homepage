@@ -347,6 +347,7 @@ main {
   padding: 4rem;
   margin-top: 2rem;
 }
+
 .contact__title {
   font-weight: 900;
   font-size: 2rem;
@@ -433,9 +434,11 @@ main {
   .header {
     padding: 1rem;
   }
+
   .header__menu {
     gap: 1rem;
   }
+
   .header__menu__item {
     font-size: 0.8rem;
   }
@@ -459,6 +462,7 @@ main {
   .services__slider__display {
     min-height: 33vh;
   }
+
   .services__slider__list__service {
     padding: 1rem;
   }
@@ -468,8 +472,7 @@ main {
     overflow: hidden;
   }
 
-  .services__slider__list__service--active
-    .services__slider__list__service__description {
+  .services__slider__list__service--active .services__slider__list__service__description {
     height: auto;
   }
 
@@ -507,6 +510,7 @@ main {
   0% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
     visibility: hidden;
@@ -632,6 +636,7 @@ main {
     border-width: 2px;
     /* Mantener el círculo visual más pequeño con un pseudo-elemento o dejamos el fondo; el hit area es 44px */
   }
+
   .circle-button-360:hover {
     transform: translate(-50%, -50%) scale(1.1);
   }
@@ -656,11 +661,13 @@ main {
 
 /* Parpadeo del locationpoint que coincide con el flip actual; color = background de ScreenTransition (#2E3641) */
 @keyframes map-dot-blink {
+
   0%,
   100% {
     opacity: 1;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
   }
+
   50% {
     opacity: 0.5;
     box-shadow: 0 0 8px rgba(46, 54, 65, 0.8);
@@ -703,8 +710,10 @@ main {
   top: -1.5rem;
   transform: translate(-50%, 0);
   width: auto;
-  min-width: 6rem; /* 50% más que 4rem */
-  padding: 0 4px; /* sin padding vertical = 50% menos altura */
+  min-width: 6rem;
+  /* 50% más que 4rem */
+  padding: 0 4px;
+  /* sin padding vertical = 50% menos altura */
   line-height: 1.1;
   z-index: 10;
 }
