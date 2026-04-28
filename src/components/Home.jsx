@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { useAtom } from "jotai";
 import { transitionHome } from "../App";
 
-const ACCESS_PASSWORD = "SohoResCabos2026";
+const ACCESS_PASSWORD = "Feelathome";
 
 const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
